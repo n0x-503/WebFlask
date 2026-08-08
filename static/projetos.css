@@ -1,147 +1,233 @@
-body {
-    font-family: Arial;
-    background-color: #071018;
+/* ==========================================
+   CONFIGURAÇÕES GERAIS & VARIÁVEIS
+   ========================================== */
+:root {
+    --cyan: #00f0ff;
+    --pink: #ff007f;
+    --bg-dark: #050811;
+    --card-bg: rgba(10, 20, 35, 0.75);
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: #ffffff;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
 
-header {
-    background-color: #0066cc;
-    color: white;
+/* ==========================================
+   FUNDO FUTURISTA ANIMADO
+   ========================================== */
+.grid-background {
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: 
+        linear-gradient(to right, rgba(0, 240, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    transform: perspective(600px) rotateX(60deg);
+    animation: grid-move 12s linear infinite;
+    z-index: -2;
+}
+
+@keyframes grid-move {
+    0% { transform: perspective(600px) rotateX(60deg) translateY(0); }
+    100% { transform: perspective(600px) rotateX(60deg) translateY(40px); }
+}
+
+.glow-orb {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(255, 0, 127, 0.08) 50%, transparent 70%);
+    filter: blur(90px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Container Principal para Centralizar */
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ==========================================
+   CABEÇALHO / TÍTULO PRINCIPAL
+   ========================================== */
+.titulo {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    padding: 35px 25px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+    clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px));
     text-align: center;
-    padding: 20px;
 }
-
-
-.projeto {
-    margin-bottom: 70px;
-}
-
 
 .titulo h1 {
-    color: #eeeeee;
-    background-color: #0d1922;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 25px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    border-bottom: 3px solid #00bfff;
+    font-family: var(--font-title);
+    color: #ffffff;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px var(--cyan), 0 0 20px var(--cyan);
+    margin-bottom: 15px;
 }
-
 
 .titulo p {
-    color: #eeeeee;
-    background-color: #0d1922;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 14px;
-    margin: 0;
-    line-height: 2.5;
-    margin-bottom: 60px;
+    font-size: 1.15rem;
+    color: #b0c4de;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
+/* ==========================================
+   CARTOES DOS PROJETOS (HUD STYLE)
+   ========================================== */
+.projeto {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-left: 4px solid var(--cyan);
+    padding: 35px;
+    margin-bottom: 50px;
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.projeto:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+    transform: translateY(-4px);
+}
 
 h2 {
+    font-family: var(--font-title);
     text-align: center;
-    color: #00bfff;
-    margin-top: 30px;
+    color: var(--cyan);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
+.autor {
+    font-size: 0.9rem;
+    color: var(--pink);
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(255, 0, 127, 0.5);
+    font-weight: bold;
+}
 
 h3 {
+    font-family: var(--font-title);
     text-align: center;
-    color: #eeeeee;
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    letter-spacing: 1px;
 }
 
-
+/* ==========================================
+   IMAGENS
+   ========================================== */
 .Imagem {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: 20px 0;
-    box-sizing: border-box;
+    margin: 25px 0;
 }
-
 
 .Imagem img {
-    max-width: 450px;
+    max-width: 420px;
     width: 100%;
     height: auto;
-    border: 3px solid #00bfff;
-    border-radius: 15px;
-    box-shadow: 0 0 15px #00bfff;
-    transition: 0.3s;
+    border: 2px solid var(--cyan);
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    transition: all 0.4s ease;
+    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
 }
-
 
 .Imagem img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 25px #00bfff;
+    transform: scale(1.04);
+    border-color: var(--pink);
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.6);
 }
-
 
 p {
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #b8c7ce;
-    font-size: 16px;
+    color: #c4d7ed;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
 }
 
-.btn-home {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    background-color: #00bfff;
-    color: #0d1922;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-    transition: 0.3s;
-}
-
-.btn-home:hover {
-    background-color: #eeeeee;
-    transform: scale(1.05);
-    box-shadow: 0 0 25px #00bfff;
-}
-
+/* ==========================================
+   RODAPÉ E BOTÃO
+   ========================================== */
 .rodape {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    background-color: #0d1922;
-    padding: 30px 20px;
-    margin-top: 50px;
-    border-top: 3px solid #00bfff;
+    background: rgba(5, 8, 17, 0.95);
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 2px solid var(--cyan);
+    box-shadow: 0 -10px 25px rgba(0, 240, 255, 0.15);
 }
 
 .btn-home {
     display: inline-block;
-    padding: 12px 28px;
-    background-color: #00bfff;
-    color: #0d1922;
+    padding: 14px 32px;
+    background: transparent;
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    font-family: var(--font-title);
+    font-size: 0.95rem;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-    transition: 0.3s;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
 
 .btn-home:hover {
-    background-color: #eeeeee;
-    transform: scale(1.05);
-    box-shadow: 0 0 25px #00bfff;
+    background: var(--cyan);
+    color: var(--bg-dark);
+    box-shadow: 0 0 25px var(--cyan);
+    transform: translateY(-2px);
 }
 
 .copyright {
-    color: #b8c7ce;
-    font-size: 12px;
-    margin-top: 15px;
-    margin-bottom: 0;
+    color: #6c809a;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    letter-spacing: 1px;
 }

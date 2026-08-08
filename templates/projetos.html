@@ -3,122 +3,83 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='projetos.css') }}"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos - 2° Eletrônica B</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='projetos.css') }}">
 </head>
 
 <body>
 
+    <div class="grid-background"></div>
+    <div class="glow-orb"></div>
 
-    <div class="titulo">
+    <main class="main-container">
 
-        <h1>
-            PROJETOS 2° ELETRÔNICA B
-        </h1>
-
-        <p>
-            Os alunos do 2º ano de Eletrônica desenvolveram projetos
-            usando ESP32, Bluetooth, sensores e programação,
-            aplicando na prática os conhecimentos adquiridos no curso.
-        </p>
-
-    </div>
-
-
-
-    <!-- PROJETO 1 -->
-
-    <div class="projeto">
-
-        <h2>
-            1° PROJETO
-            <br>
-            feito por: joão
-        </h2>
-
-        <h3>
-            SENSOR DE MOVIMENTO 📢
-        </h3>
-
-        <div class="Imagem">
-
-            <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7DDq0hq64ZZv5XUuLdomPEHFMGLcGwJfIXnRKsybJ_g&s=10"
-                alt="Foto do projeto Sensor de Movimento"
-            >
-
+        <div class="titulo">
+            <h1>PROJETOS 2° ELETRÔNICA B</h1>
+            <p>
+                Os alunos do 2º ano de Eletrônica desenvolveram projetos
+                usando ESP32, Bluetooth, sensores e programação,
+                aplicando na prática os conhecimentos adquiridos no curso.
+            </p>
         </div>
 
-        <p>
-            ● Um sensor de movimento detecta quando uma pessoa ou objeto
-            se movimenta em determinado local.
+        <div class="projeto">
+            <h2>
+                1° PROJETO
+                <span class="autor">FEITO POR: JOÃO</span>
+            </h2>
 
-            <br>
+            <h3>SENSOR DE MOVIMENTO 📢</h3>
 
-            Ele pode enviar um sinal para um ESP32, que então executa
-            uma ação, como acender uma luz, emitir um alerta ou enviar
-            uma informação por Bluetooth.
-        </p>
+            <div class="Imagem">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7DDq0hq64ZZv5XUuLdomPEHFMGLcGwJfIXnRKsybJ_g&s=10" alt="Foto do projeto Sensor de Movimento">
+            </div>
 
-    </div>
-
-
-    <!-- PROJETO 2 -->
-
-    <div class="projeto">
-
-        <h2>
-            2° PROJETO
-            <br>
-            feito por: Gabriel
-        </h2>
-
-        <h3>
-            CONTROLE DE SERVO MOTOR ⚙️
-        </h3>
-
-        <div class="Imagem">
-
-            <img
-                src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRciE6CAD4QdMV2DKF-tFDMyr4g3A2JM5Ar27yWJrxWiHS52nCqv0ZHlmRgPR45EdOY60VQLmV1XeUhAgelNZuLa51J30Fm"
-                alt="Foto do projeto Controle de Servo Motor"
-            >
-
+            <p>
+                ● Um sensor de movimento detecta quando uma pessoa ou objeto
+                se movimenta em determinado local.
+                <br><br>
+                Ele pode enviar um sinal para um ESP32, que então executa
+                uma ação, como acender uma luz, emitir um alerta ou enviar
+                uma informação por Bluetooth.
+            </p>
         </div>
 
-        <p>
-            ● Projeto desenvolvido utilizando um ESP32 para controlar
-            a posição do servo através
-            de comandos enviados ao microcontrolador.
-        </p>
+        <div class="projeto">
+            <h2>
+                2° PROJETO
+                <span class="autor">FEITO POR: GABRIEL</span>
+            </h2>
 
-    </div>
+            <h3>CONTROLE DE SERVO MOTOR ⚙️</h3>
 
+            <div class="Imagem">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRciE6CAD4QdMV2DKF-tFDMyr4g3A2JM5Ar27yWJrxWiHS52nCqv0ZHlmRgPR45EdOY60VQLmV1XeUhAgelNZuLa51J30Fm" alt="Foto do projeto Controle de Servo Motor">
+            </div>
 
-    <!-- RODAPÉ -->
+            <p>
+                ● Projeto desenvolvido utilizando um ESP32 para controlar
+                a posição do servo através de comandos enviados ao microcontrolador.
+            </p>
+        </div>
+
+    </main>
 
     <footer class="rodape">
-
-        <a href="{{ url_for('homepage') }}" class="btn-home">
+        <a href="http://127.0.0.1:5000" class="btn-home">
             ⬅ Voltar para a Home
         </a>
 
         <p class="copyright">
             © 2026 - 2° Eletrônica B - Todos os direitos reservados
         </p>
-
     </footer>
-
 
 </body>
 
