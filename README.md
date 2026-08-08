@@ -1,102 +1,149 @@
-# 🚀 Mostra Técnica — Sistema de Divulgação
+<div align="center">
 
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-plain.svg" width="80"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" width="100"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="80"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" width="80"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="80"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-line.svg" width="80"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-plain-wordmark.svg" width="100"/>
-</p>
+# 🚀 MOSTRA TÉCNICA
 
-<p align="center">
-  <strong>🌐 Desenvolvimento Web + 🔌 Sistemas Embarcados + 📡 Bluetooth BLE</strong>
-</p>
+### 🌐 Site de Divulgação
+
+**Tecnologia • Inovação • Criatividade • Desenvolvimento Web**
+
+<br>
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+<br>
+
+> 💡 Um espaço digital para apresentar ideias, projetos e conhecimentos desenvolvidos pelos alunos.
+
+</div>
 
 ---
 
-## 📖 Sobre o Projeto
+## 📑 Sumário
 
-Este projeto tem como objetivo desenvolver um **site para a Mostra Técnica da nossa escola**, apresentando informações sobre o curso, a exposição e os projetos desenvolvidos pelos alunos.
+- [📖 Sobre o Projeto](#-sobre-o-projeto)
+- [🎯 Objetivos](#-objetivos)
+- [✨ Funcionalidades](#-funcionalidades)
+- [🛠️ Tecnologias](#️-tecnologias)
+- [🏗️ Arquitetura](#️-arquitetura)
+- [📱 Divulgação](#-divulgação)
+- [📂 Estrutura](#-estrutura)
+- [⚙️ Instalação](#️-instalação)
+- [🚀 Execução](#-execução)
+- [📈 Futuras Melhorias](#-futuras-melhorias)
+- [👨‍💻 Equipe](#-equipe)
 
-Para facilitar o acesso dos visitantes ao site, utilizaremos um **microcontrolador com tecnologia Bluetooth Low Energy (BLE)**.
+---
 
-A ideia é utilizar a comunicação Bluetooth para disponibilizar a **URL do site aos visitantes** que chegarem ao barracão do nosso curso.
+# 📖 Sobre o Projeto
 
-Dessa forma, o visitante poderá acessar informações sobre:
+O **Mostra Técnica** é um projeto desenvolvido para criar um **site de divulgação da Mostra Técnica da nossa escola**.
 
-- 🎓 Nosso curso;
-- 🔬 A Mostra Técnica;
-- 🛠️ Os projetos desenvolvidos;
+A plataforma tem como objetivo reunir, em um único ambiente, informações sobre:
 
-O projeto une **hardware, sistemas embarcados e desenvolvimento web**, criando uma experiência tecnológica e interativa para os visitantes.
+- 🎓 O curso;
+- 🔬 Os projetos desenvolvidos pelos alunos;
+- 📚 A Mostra Técnica;
+- 💡 Os conhecimentos adquiridos durante o curso;
+- 🌐 As tecnologias utilizadas no desenvolvimento.
+
+A proposta é transformar o site em uma **extensão digital da Mostra Técnica**, permitindo que visitantes tenham acesso rápido e fácil às informações do evento.
 
 ---
 
 # 🎯 Objetivos
 
-- 🌐 Desenvolver um site para a Mostra Técnica;
-- 🎓 Apresentar informações sobre o nosso curso;
-- 🔬 Divulgar a Mostra Técnica;
-- 🛠️ Apresentar os projetos desenvolvidos pelos alunos;
-- 📡 Utilizar **Bluetooth Low Energy (BLE)** para disponibilizar a URL do site;
-- 🔌 Integrar um microcontrolador com uma aplicação web;
-- 📱 Facilitar o acesso dos visitantes às informações;
-- 💻 Aplicar conhecimentos de desenvolvimento web;
-- ⚙️ Trabalhar com sistemas embarcados e comunicação sem fio.
+<table>
+<tr>
+<td width="50%">
+
+### 🌐 Desenvolver
+
+Criar uma plataforma web moderna, funcional e responsiva.
+
+</td>
+
+<td width="50%">
+
+### 🎓 Apresentar
+
+Divulgar o curso e suas principais características.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### 🔬 Demonstrar
+
+Apresentar os projetos desenvolvidos pelos alunos.
+
+</td>
+
+<td width="50%">
+
+### 📱 Facilitar
+
+Permitir que visitantes encontrem informações de maneira rápida.
+
+</td>
+</tr>
+
+<tr>
+<td width="50%">
+
+### 💻 Aplicar
+
+Colocar em prática conhecimentos de desenvolvimento web.
+
+</td>
+
+<td width="50%">
+
+### 🎨 Inovar
+
+Criar uma experiência visual moderna e interativa.
+
+</td>
+</tr>
+</table>
 
 ---
 
-# ⚙️ Funcionamento
+# ✨ Funcionalidades
 
-O projeto será dividido em duas partes principais:
+> 🚧 **Projeto em desenvolvimento**
 
-### 🔌 Hardware
+### 🏠 Página Inicial
 
-O hardware será responsável pela comunicação através do **Bluetooth Low Energy (BLE)**.
+Apresentação da Mostra Técnica e acesso às principais áreas do site.
 
-Um microcontrolador será programado para disponibilizar as informações necessárias para que os visitantes possam obter a URL do site.
+### 🎓 Informações do Curso
 
-### 🌐 Software
+Página dedicada à apresentação do curso, sua proposta e suas áreas de conhecimento.
 
-O software será responsável pelo desenvolvimento do site e pelo gerenciamento das informações apresentadas aos visitantes.
+### 🔬 Projetos
 
-A aplicação web será desenvolvida utilizando **Python, Flask, HTML, CSS e JavaScript**.
+Espaço destinado à apresentação dos projetos desenvolvidos pelos alunos.
 
----
+### 📱 Design Responsivo
 
-# 📡 Bluetooth Low Energy — BLE
-
-O **Bluetooth Low Energy (BLE)** será utilizado para realizar a comunicação sem fio entre o sistema embarcado e os visitantes.
-
-O microcontrolador será configurado para trabalhar com BLE e disponibilizar a informação necessária para o acesso ao site.
-
-O BLE foi escolhido por ser uma tecnologia de comunicação sem fio que possui **baixo consumo de energia**, sendo muito utilizada em sistemas embarcados e dispositivos que precisam transmitir pequenas quantidades de dados.
-
-### 🔗 Fluxo da comunicação
+O site será desenvolvido para funcionar em diferentes dispositivos.
 
 ```text
-┌─────────────────────────┐
-│    🔌 MICROCONTROLADOR  │
-│                         │
-│          BLE            │
-└────────────┬────────────┘
-             │
-             │ 📡 Bluetooth
-             ▼
-┌─────────────────────────┐
-│       📱 VISITANTE      │
-│                         │
-│      Obtém a URL        │
-└────────────┬────────────┘
-             │
-             │ 🌐 Internet
-             ▼
-┌─────────────────────────┐
-│        💻 WEBSITE       │
-│                         │
-│  🎓 Curso               │
-│  🔬 Mostra Técnica      │
-│  🛠️ Projetos            │
-└─────────────────────────┘
+┌─────────────────────────────────────────────┐
+│                                             │
+│                 💻 DESKTOP                  │
+│                                             │
+└─────────────────────────────────────────────┘
+
+
+             ┌─────────────────┐
+             │                 │
+             │    📱 MOBILE   │
+             │                 │
+             └─────────────────┘
