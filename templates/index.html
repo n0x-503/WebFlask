@@ -7,21 +7,33 @@
     <title>Mostra Técnica 2026</title>
   </head>
   <body>
+  <div class="caixa1">
+  <section class="topo">
     <h1>Mostra Técnica 2026</h1>
-    
+  </section>
+
+  <section class="primeiro">
     <p>Obrigado por vir a Mostra Técnica 2026 da Etec Philadelpho Gouvêa Netto! <br> Você está no barracão de Eletrônica, visite os projetos!</p>
+  </section>
+  </div>
+
+
     <div class="bloco">
       <img src="https://images.unsplash.com/photo-1649559295229-961cbad5d13f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXNwMzJ8ZW58MHx8MHx8fDA%3D" alt="Foto do ESP32" />
-      <a href="#sobre">Saiba mais sobre a mostra técnica.</a>
-      
+      <a href="#sobre"> <button>Saiba mais sobre a mostra técnica</button></a>
+    </div>
+
+    <div class="caixa2">
+
       <section id="sobre">
-         <h1>Saiba mais sobre a mostra técnica.</h1>
+         <h2>Saiba mais sobre a mostra técnica:</h2>
          
          <p>A mostra técnica da Etec Philadelpho Gouvêa Netto é um evento que acontece anualmente onde alunos têm a oportunidade de mostrarem seus projetos desenvolvidos em grupo.</p>
       </section>
+
+    <a class="projetos" href="{{ url_for('projetos') }}"><button>Ver os projetos</button></a>
+    
     </div>
 
-    <a href="{{ url_for('projetos') }}">Ver os projetos</a>
-    
   </body>
 </html>

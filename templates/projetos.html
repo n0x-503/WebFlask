@@ -72,10 +72,12 @@
     </main>
 
     <footer class="rodape">
-        <a href="http://127.0.0.1:5000" class="btn-home">
+        <a href="{{ url_for('homepage') }}" class="btn-home">
             ⬅ Voltar para a Home
         </a>
-
+        <a href="{{ url_for('nossoprojeto') }}" class="btn-projeto">
+            Nosso Projeto
+        </a>
         <p class="copyright">
             © 2026 - 2° Eletrônica B - Todos os direitos reservados
         </p>
