@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='nossoprojeto.css') }}">
+    <title>Nosso Projeto</title>
+</head>
+<body>
+    <div class="grid-background">
+        <h1>Projeto de automação com bluetooth</h1>
+        <p>Este projeto apresenta uma solução acessível e eficiente para a automação de ambientes utilizando comunicação Bluetooth.</p>
+    </div>
+
+    <!-- Seção Bluetooth (Imagem na Esquerda, Texto na Direita) -->
+    <div class="conteudo-container">
+        <img src="https://www.meupositivo.com.br/doseujeito/wp-content/uploads/2022/04/Bluetooth-5.2-o-que-e-como-funciona-1.jpg" class="foto-esquerda" alt="Bluetooth">
+        
+        <div class="texto-bloco">
+            <h2 class="bluetooth">O que é o Bluetooth?</h2>
+            <p class="texto-direita">Para entender o funcionamento do nosso projeto precisamos entender o que é o Bluetooth. O Bluetooth é uma tecnologia de comunicação sem fio de curto alcance que usa ondas de rádio na faixa de 2,4 GHz. Ela serve para ligar aparelhos próximos, trocar dados, tocar músicas em fones e criar redes sem cabos. Conectar acessórios: Liga mouses, teclados e fones ao celular ou PC. Automação: Ajuda a controlar placas e sensores sem usar fios. Redes locais: Forma pequenas conexões entre poucos aparelhos ao mesmo tempo.</p>
+            <button class="botao-voltar" onclick="window.location.href='https://pt.wikipedia.org/wiki/Bluetooth'">Saiba mais</button>
+        </div>
+    </div>
+
+    <div class="esp32-contanier">
+        <div class="esp32-texto">
+            <h2 class="esp32">O que é o ESP32?</h2>
+            <p class="texto-direita">O ESP32 é um microcontrolador de baixo custo e alto desempenho, desenvolvido pela Espressif Systems. Ele é amplamente utilizado em projetos de Internet das Coisas (IoT) devido à sua capacidade de se conectar a redes Wi-Fi e Bluetooth, além de possuir múltiplos pinos de entrada/saída para controlar sensores, atuadores e outros dispositivos eletrônicos. O ESP32 é conhecido por sua eficiência energética, permitindo que dispositivos funcionem por longos períodos com baterias pequenas. Ele também suporta programação em diversas linguagens, como C/C++ e MicroPython, tornando-o acessível para desenvolvedores de diferentes níveis de experiência.</p>
+            <button class="botao-voltar" onclick="window.location.href='https://pt.wikipedia.org/wiki/ESP32'">Saiba mais</button>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2HuFwzGvjPO8oXILl3-ka4lYlvJr6cE02lLMLzpc4ag&s=10" class="foto-direita" alt="ESP32">
+    </div>
+</body>
+</html>
+

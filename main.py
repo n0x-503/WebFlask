@@ -11,5 +11,9 @@ def homepage():
 def projetos():
     return render_template("projetos.html")
 
+@app.route("/nossoprojeto")
+def nossoprojeto():
+    return render_template("nossoprojeto.html")
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)

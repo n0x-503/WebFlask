@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B132B;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+
+.grid-background {
+    display: grid;
+    background-color: #0F172A;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #1794D1;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 4px solid #0088ff;
+}
+
+.grid-background h1 {
+    color: #1794D1;
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    grid-column: 1 / -1; 
+}
+
+.grid-background p {
+    color: #1794D1;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    grid-column: 1 / -1; 
+}
+
+
+.conteudo-container {
+    display: grid; 
+    margin-top: 100px;      
+    align-items: center; 
+    gap: 40px;  
+    width: 100%;    
+    grid-template-columns: 1fr 1fr; /* Dividido igualmente em duas colunas */
+    padding-left: 15px;
+    padding-right: 30px; 
+}
+
+.foto-esquerda {
+    border-radius: 20px;
+    border: 5px solid #1794D1;
+    max-width: 100%; /* Garante que se ajuste perfeitamente à coluna do Grid */
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.foto-esquerda:hover {
+    transform: scale(1.02); 
+}
+
+.texto-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+
+.bluetooth {
+    color: #1794D1; 
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.texto-direita {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+.botao-voltar {
+    align-self: flex-start; 
+    padding: 10px 20px;
+    background-color: #1794D1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-voltar:hover {
+    background-color: #116b99;
+    transform: scale(1.08); 
+}
+
+/* CORRIGIDO: Adicionado o ponto (.) e ajustado para 2 colunas iguais */
+.esp32-contanier {
+    display: grid; 
+    margin-top: 80px;      
+    align-items: center; 
+    gap: 40px;  
+    width: 100%;    
+    grid-template-columns: 1fr 1fr; /* Texto na esquerda, foto na direita */
+    padding-left: 25px;
+    padding-right: 30px; 
+    margin-bottom: 100px; /* Margem inferior para espaçamento do fim da página */
+}
+
+.esp32-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.esp32 {
+    color: #1794D1; 
+    font-size: 24px;
+}
+
+/* CORRIGIDO: Removido as margens forçadas e o float que quebravam o Grid */
+.foto-direita {
+    border-radius: 20px;
+    border: 5px solid #1794D1;
+    max-width: 100%; /* Ajusta-se perfeitamente dentro da coluna direita */
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.foto-direita:hover {
+    transform: scale(1.02); 
+}
