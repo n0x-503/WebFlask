@@ -1,19 +1,55 @@
-body{
-  margin: 0;
-  background-color:whitesmoke;  
-}
+
 html {
   margin: 0;
   scroll-behavior: smooth;
 }
+
+body {
+  margin: 0;
+  background-color: whitesmoke;  
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; 
+}
+
 .topo {
   background-color: darkblue;
-  padding: 1px 10px;
+  padding: 10px;
   border-radius: 15px;
+  margin: 10px;
 }
+
+h1 {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 42px;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.caixa1,
+.caixa2 {
+  width: 90%;
+  max-width: 1000px; 
+  margin: 40px auto;
+  background-color: whitesmoke;
+  border: 3px solid darkblue;
+  border-radius: 20px;
+  box-shadow: 0 0 5px darkblue;
+}
+
 .bloco {
   margin: 0 auto;
-  position:relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,127 +57,108 @@ html {
   gap: 15px;
 
   width: 100%;
-  max-width: 500px;
   padding: 30px;
   border-radius: 20px;
-  background-color: whitesmoke;
-  border: 3px solid darkblue;
-  box-shadow: 0 0 2px darkblue,
-              0 0 5px darkblue,
-              0 0 10px darkblue;
   text-align: center;
+  transition: transform 0.3s ease;
+}
 
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.bloco:hover {
+  transform: scale(1.02);
 }
-.bloco:hover{
-  transform: scale(1.05);
-}
+
 .bloco img {
-    display: block;
-    margin: 0 auto;
-
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    height: 300px;
-    object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
 }
-.bloco button {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px;
-  cursor: pointer;
 
+.bloco button,
+.projetos button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+  cursor: pointer;
   background-color: blue;
   color: whitesmoke;
   border: 3px solid darkblue;
   border-radius: 10px;
-
   padding: 10px 20px;
+  transition: all 0.3s ease;
 }
-.bloco button:hover{
+
+.bloco button:hover,
+.projetos button:hover {
   background-color: whitesmoke;
   color: blue;
-  border: 3px solid darkblue;
-  border-radius: 10px;
-}
-h1{
-  color: white;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-  font-size: 42px;
-  text-align: center;
-}
-.primeiro p{
-  color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px;
-  text-align: center;
-  padding: 20px 20px 50px 20px;
+  transform: scale(1.05);
 }
 
-h2{
-  color: blue;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-  font-size: 50px;
-  text-align: center;
-}
-#sobre{
-  margin-top: 0;
-  padding: 30px 100px;
-}
-#sobre p{
+.primeiro p,
+#sobre p {
   color: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
-  padding: 0px 20px;
+  line-height: 1.5;
+  padding: 10px 20px;
 }
+
+#sobre {
+  margin-top: 0;
+  padding: 30px 40px;
+}
+
 .projetos {
   text-decoration: none;
   padding: 20px;
-}
-.projetos button{
-  margin: 0 auto;
-  position:relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 15px;
-
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25px;
-  cursor: pointer;
-
-  background-color: blue;
-  color: whitesmoke;
-  border: 3px solid darkblue;
-  border-radius: 10px;
-
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.projetos button:hover{
-  transform: scale(1.05);
 
-  background-color: whitesmoke;
-  color: blue;
-  border: 3px solid darkblue;
 
-  border-radius: 10px;
-}
-.caixa1 {
-  width: 1000px;
-  margin: 50px auto;
 
-  background-color: whitesmoke;
-  border: 3px solid darkblue;
-  border-radius: 20px;
-}
-.caixa2 {
-  width: 1000px;
-  margin: 50px auto;
+@media (max-width: 768px) {
+  
+  h1 {
+    font-size: 28px; 
+  }
 
-  background-color: whitesmoke;
-  border: 3px solid darkblue;
-  border-radius: 20px;
+  h2 {
+    font-size: 26px;
+  }
+
+  .caixa1,
+  .caixa2 {
+    width: 95%; 
+    margin: 20px auto;
+  }
+
+  .bloco {
+    padding: 15px; 
+  }
+
+  .bloco img {
+    height: 200px; 
+  }
+
+  #sobre {
+    padding: 20px 10px; 
+  }
+
+  .primeiro p,
+  #sobre p {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .bloco button,
+  .projetos button {
+    font-size: 18px;
+    width: 100%; 
+    padding: 12px 10px;
+  }
 }

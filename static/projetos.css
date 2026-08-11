@@ -61,7 +61,7 @@ body {
     pointer-events: none;
 }
 
-/* Container Principal para Centralizar */
+/* Container Principal */
 .main-container {
     max-width: 900px;
     margin: 0 auto;
@@ -101,7 +101,7 @@ body {
 }
 
 /* ==========================================
-   CARTOES DOS PROJETOS (HUD STYLE)
+   CARTÕES DOS PROJETOS
    ========================================== */
 .projeto {
     background: var(--card-bg);
@@ -187,7 +187,7 @@ p {
 }
 
 /* ==========================================
-   RODAPÉ E BOTÃO
+   RODAPÉ E BOTÕES DE NAVEGAÇÃO
    ========================================== */
 .rodape {
     display: flex;
@@ -201,17 +201,27 @@ p {
     box-shadow: 0 -10px 25px rgba(0, 240, 255, 0.15);
 }
 
+.botoes-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin-bottom: 25px;
+}
+
 .btn-home {
-    display: inline-block;
-    padding: 14px 32px;
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 28px;
     background: transparent;
     color: var(--cyan);
     border: 1px solid var(--cyan);
     font-family: var(--font-title);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: bold;
     text-decoration: none;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
@@ -219,15 +229,80 @@ p {
 }
 
 .btn-home:hover {
-    background: var(--cyan);
-    color: var(--bg-dark);
-    box-shadow: 0 0 25px var(--cyan);
+    background: rgba(0, 240, 255, 0.1);
+    color: #ffffff;
+    box-shadow: 0 0 20px var(--cyan);
     transform: translateY(-2px);
+}
+
+.btn-destaque {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, var(--cyan) 0%, #0088ff 100%);
+    color: #050811;
+    border: none;
+    font-family: var(--font-title);
+    font-size: 1rem;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 35px rgba(0, 240, 255, 0.3);
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+}
+
+.btn-destaque .icone-seta {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-destaque:hover {
+    background: linear-gradient(135deg, #ffffff 0%, var(--cyan) 100%);
+    color: #050811;
+    box-shadow: 0 0 30px var(--cyan), 0 0 50px rgba(0, 240, 255, 0.6);
+    transform: translateY(-3px) scale(1.02);
+}
+
+.btn-destaque:hover .icone-seta {
+    transform: translateX(6px); 
+}
+
+.btn-destaque::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-destaque:hover::before {
+    left: 100%;
 }
 
 .copyright {
     color: #6c809a;
     font-size: 0.9rem;
-    margin-top: 20px;
     letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .botoes-container {
+        flex-direction: column-reverse; 
+        width: 100%;
+    }
+
+    .btn-home,
+    .btn-destaque {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
 }

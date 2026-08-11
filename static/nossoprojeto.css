@@ -1,139 +1,193 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==========================================
+   NOSSO PROJETO - CSS ATUALIZADO
+   ========================================== */
+html {
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0B132B;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #333;
+  margin: 0;
+  background-color: whitesmoke;  
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #222222;
 }
 
-
-.grid-background {
-    display: grid;
-    background-color: #0F172A;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #1794D1;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    border-bottom: 4px solid #0088ff;
+/* Header */
+header.grid-background {
+  background-color: darkblue;
+  padding: 30px 20px;
+  border-radius: 0 0 15px 15px;
+  text-align: center;
+  color: white;
 }
 
-.grid-background h1 {
-    color: #1794D1;
-    font-family: Arial, sans-serif;
-    font-size: 35px;
-    text-align: center;
-    grid-column: 1 / -1; 
+header.grid-background h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
-.grid-background p {
-    color: #1794D1;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    text-align: center;
-    grid-column: 1 / -1; 
+header.grid-background p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
 }
 
-
-.conteudo-container {
-    display: grid; 
-    margin-top: 100px;      
-    align-items: center; 
-    gap: 40px;  
-    width: 100%;    
-    grid-template-columns: 1fr 1fr; /* Dividido igualmente em duas colunas */
-    padding-left: 15px;
-    padding-right: 30px; 
+/* Container Principal */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
 }
 
-.foto-esquerda {
-    border-radius: 20px;
-    border: 5px solid #1794D1;
-    max-width: 100%; /* Garante que se ajuste perfeitamente à coluna do Grid */
-    height: auto;
-    transition: transform 0.5s ease;
+/* Seções de Conteúdo (Bluetooth & ESP32) */
+.conteudo-container,
+.esp32-container,
+.detalhes-projeto,
+.secao-tabela,
+.secao-integrantes {
+  background-color: white;
+  border: 3px solid darkblue;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 139, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
 }
 
-.foto-esquerda:hover {
-    transform: scale(1.02); 
+.detalhes-projeto,
+.secao-tabela,
+.secao-integrantes {
+  display: block; /* Para seções de bloco único */
 }
 
-.texto-bloco {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
+/* Textos e Títulos */
+h2 {
+  color: darkblue;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 32px;
+  margin-top: 0;
 }
 
-
-.bluetooth {
-    color: #1794D1; 
-    font-size: 24px;
-    margin-top: 0;
+p, li {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
-.texto-direita {
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.6;
-    color: white;
+/* Blocos com Imagens */
+.texto-bloco, .esp32-texto {
+  flex: 1;
+  min-width: 280px;
 }
 
+.foto-esquerda, .foto-direita {
+  width: 100%;
+  max-width: 380px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid darkblue;
+  margin: 0 auto;
+}
+
+/* Botões */
 .botao-voltar {
-    align-self: flex-start; 
-    padding: 10px 20px;
-    background-color: #1794D1;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  text-decoration: none;
+  background-color: blue;
+  color: whitesmoke;
+  border: 2px solid darkblue;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
 }
 
 .botao-voltar:hover {
-    background-color: #116b99;
-    transform: scale(1.08); 
+  background-color: whitesmoke;
+  color: blue;
+  transform: scale(1.05);
 }
 
-/* CORRIGIDO: Adicionado o ponto (.) e ajustado para 2 colunas iguais */
-.esp32-contanier {
-    display: grid; 
-    margin-top: 80px;      
-    align-items: center; 
-    gap: 40px;  
-    width: 100%;    
-    grid-template-columns: 1fr 1fr; /* Texto na esquerda, foto na direita */
-    padding-left: 25px;
-    padding-right: 30px; 
-    margin-bottom: 100px; /* Margem inferior para espaçamento do fim da página */
+/* FAQ / Details */
+.faq-container details {
+  background-color: whitesmoke;
+  border: 1px solid darkblue;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-.esp32-texto {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
+.faq-container summary {
+  font-weight: bold;
+  font-size: 18px;
+  color: darkblue;
 }
 
-.esp32 {
-    color: #1794D1; 
+/* Tabelas */
+.tabela-wrapper {
+  overflow-x: auto; /* Garante que a tabela não quebre no celular */
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #cccccc;
+}
+
+th {
+  background-color: darkblue;
+  color: white;
+  font-size: 18px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Rodapé */
+footer {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (CELULAR)
+   ========================================== */
+@media (max-width: 768px) {
+  header.grid-background h1 {
+    font-size: 26px;
+  }
+
+  h2 {
     font-size: 24px;
-}
+  }
 
-/* CORRIGIDO: Removido as margens forçadas e o float que quebravam o Grid */
-.foto-direita {
-    border-radius: 20px;
-    border: 5px solid #1794D1;
-    max-width: 100%; /* Ajusta-se perfeitamente dentro da coluna direita */
+  .conteudo-container,
+  .esp32-container {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .foto-esquerda, .foto-direita {
+    max-width: 100%;
     height: auto;
-    transition: transform 0.5s ease;
-}
-
-.foto-direita:hover {
-    transform: scale(1.02); 
+  }
 }
