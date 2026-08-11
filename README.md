@@ -22,19 +22,11 @@
 
 ---
 
-## 📑 Sumário
+## Equipe 🏆
 
-- [📖 Sobre o Projeto](#-sobre-o-projeto)
-- [🎯 Objetivos](#-objetivos)
-- [✨ Funcionalidades](#-funcionalidades)
-- [🛠️ Tecnologias](#️-tecnologias)
-- [🏗️ Arquitetura](#️-arquitetura)
-- [📱 Divulgação](#-divulgação)
-- [📂 Estrutura](#-estrutura)
-- [⚙️ Instalação](#️-instalação)
-- [🚀 Execução](#-execução)
-- [📈 Futuras Melhorias](#-futuras-melhorias)
-- [👨‍💻 Equipe](#-equipe)
+- Levi Santos da Cruz
+- João Pedro de Oliveira Nestor
+- Gabriel Alves Silva
 
 ---
 
