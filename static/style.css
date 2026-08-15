@@ -162,3 +162,11 @@ h2 {
     padding: 12px 10px;
   }
 }
+
+footer {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
