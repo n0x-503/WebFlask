@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🚀 MOSTRA TÉCNICA
+# Mostra Técnica
 
-### 🌐 Site de Divulgação
+### Site de Divulgação
 
 **Tecnologia • Inovação • Criatividade • Desenvolvimento Web**
 
@@ -16,51 +16,46 @@
 
 <br>
 
-> 💡 Um espaço digital para apresentar ideias, projetos e conhecimentos desenvolvidos pelos alunos.
+> Um espaço digital para apresentar ideias, projetos e conhecimentos desenvolvidos pelos alunos.
 
 </div>
 
 ---
 
-## 📑 Sumário
+## Equipe
 
-- [📖 Sobre o Projeto](#-sobre-o-projeto)
-- [🎯 Objetivos](#-objetivos)
-- [✨ Funcionalidades](#-funcionalidades)
-- [🛠️ Tecnologias](#️-tecnologias)
-- [🏗️ Arquitetura](#️-arquitetura)
-- [📱 Divulgação](#-divulgação)
-- [📂 Estrutura](#-estrutura)
-- [⚙️ Instalação](#️-instalação)
-- [🚀 Execução](#-execução)
-- [📈 Futuras Melhorias](#-futuras-melhorias)
-- [👨‍💻 Equipe](#-equipe)
+- Levi Santos da Cruz
+- João Pedro de Oliveira Nestor
+- Gabriel Alves Silva
 
 ---
 
-# 📖 Sobre o Projeto
+## Sobre o Projeto
 
 O **Mostra Técnica** é um projeto desenvolvido para criar um **site de divulgação da Mostra Técnica da nossa escola**.
 
-A plataforma tem como objetivo reunir, em um único ambiente, informações sobre:
+A plataforma tem como objetivo reunir, em um único ambiente, informações sobre o curso, os projetos desenvolvidos pelos alunos, o evento e os conhecimentos adquiridos durante a formação.
 
-- 🎓 O curso;
-- 🔬 Os projetos desenvolvidos pelos alunos;
-- 📚 A Mostra Técnica;
-- 💡 Os conhecimentos adquiridos durante o curso;
-- 🌐 As tecnologias utilizadas no desenvolvimento.
+A proposta é transformar o site em uma **extensão digital da Mostra Técnica**, permitindo que visitantes tenham acesso rápido e organizado às informações do evento.
 
-A proposta é transformar o site em uma **extensão digital da Mostra Técnica**, permitindo que visitantes tenham acesso rápido e fácil às informações do evento.
+### Informações apresentadas
+
+- Informações sobre o curso
+- Projetos desenvolvidos pelos alunos
+- Informações sobre a Mostra Técnica
+- Conhecimentos adquiridos durante o curso
+- Tecnologias utilizadas no desenvolvimento
 
 ---
 
-# 🎯 Objetivos
+## Objetivos
 
 <table>
 <tr>
+
 <td width="50%">
 
-### 🌐 Desenvolver
+### Desenvolvimento
 
 Criar uma plataforma web moderna, funcional e responsiva.
 
@@ -68,82 +63,109 @@ Criar uma plataforma web moderna, funcional e responsiva.
 
 <td width="50%">
 
-### 🎓 Apresentar
+### Divulgação
 
-Divulgar o curso e suas principais características.
+Apresentar o curso, seus projetos e suas principais características.
 
 </td>
+
 </tr>
 
 <tr>
+
 <td width="50%">
 
-### 🔬 Demonstrar
+### Demonstração
 
-Apresentar os projetos desenvolvidos pelos alunos.
+Apresentar os projetos desenvolvidos pelos alunos durante o curso.
 
 </td>
 
 <td width="50%">
 
-### 📱 Facilitar
+### Acessibilidade
 
-Permitir que visitantes encontrem informações de maneira rápida.
+Permitir que os visitantes encontrem informações de forma rápida e organizada.
 
 </td>
+
 </tr>
 
 <tr>
+
 <td width="50%">
 
-### 💻 Aplicar
+### Aprendizado
 
-Colocar em prática conhecimentos de desenvolvimento web.
+Aplicar na prática conhecimentos de desenvolvimento web.
 
 </td>
 
 <td width="50%">
 
-### 🎨 Inovar
+### Experiência
 
-Criar uma experiência visual moderna e interativa.
+Desenvolver uma interface moderna, intuitiva e interativa.
 
 </td>
+
 </tr>
 </table>
 
 ---
 
-# ✨ Funcionalidades
+## Funcionalidades
 
-> 🚧 **Projeto em desenvolvimento**
+> **Projeto em desenvolvimento**
 
-### 🏠 Página Inicial
+### Página Inicial
 
 Apresentação da Mostra Técnica e acesso às principais áreas do site.
 
-### 🎓 Informações do Curso
+### Informações do Curso
 
-Página dedicada à apresentação do curso, sua proposta e suas áreas de conhecimento.
+Página dedicada à apresentação do curso, sua proposta e suas principais áreas de conhecimento.
 
-### 🔬 Projetos
+### Projetos
 
 Espaço destinado à apresentação dos projetos desenvolvidos pelos alunos.
 
-### 📱 Design Responsivo
+### Design Responsivo
 
-O site será desenvolvido para funcionar em diferentes dispositivos.
+O site será desenvolvido para oferecer uma boa experiência em diferentes dispositivos, incluindo computadores, tablets e smartphones.
+
+---
+
+## Tecnologias Utilizadas
+
+<div align="center">
+
+| Tecnologia | Utilização |
+|---|---|
+| Python | Desenvolvimento da aplicação |
+| Flask | Framework web |
+| HTML5 | Estrutura das páginas |
+| CSS3 | Estilização e layout |
+| JavaScript | Interatividade e funcionalidades |
+
+</div>
+
+---
+
+## Estrutura do Projeto
 
 ```text
-┌─────────────────────────────────────────────┐
-│                                             │
-│                 💻 DESKTOP                  │
-│                                             │
-└─────────────────────────────────────────────┘
-
-
-             ┌─────────────────┐
-             │                 │
-             │    📱 MOBILE   │
-             │                 │
-             └─────────────────┘
+mostra-tecnica/
+│
+├── app.py
+├── templates/
+│   ├── index.html
+│   ├── projetos.html
+│   └── curso.html
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── img/
+│
+└── README.md

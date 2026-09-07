@@ -259,3 +259,11 @@ h2::after {
     justify-content: center;
   }
 }
+
+footer {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
