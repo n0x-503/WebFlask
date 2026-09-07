@@ -1,6 +1,11 @@
-/* ==========================================
-   NOSSO PROJETO - CSS ATUALIZADO
-   ========================================== */
+:root {
+  --green-neon: #39ff14;
+  --bg-dark: #0a0a0a;
+  --bg-card: #121212;
+  --text-color: #e0e0e0;
+  --border-neon: rgba(57, 255, 20, 0.4);
+}
+
 html {
   margin: 0;
   scroll-behavior: smooth;
@@ -8,52 +13,53 @@ html {
 
 body {
   margin: 0;
-  background-color: whitesmoke;  
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #222222;
+  background-color: var(--bg-dark);  
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
 }
 
-/* Header */
 header.grid-background {
-  background-color: darkblue;
+  background-color: var(--bg-card);
   padding: 30px 20px;
   border-radius: 0 0 15px 15px;
   text-align: center;
-  color: white;
+  color: var(--green-neon);
+  border-bottom: 2px solid var(--green-neon);
+  box-shadow: 0 4px 20px rgba(57, 255, 20, 0.2);
 }
 
 header.grid-background h1 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 36px;
   margin-bottom: 10px;
+  text-shadow: 0 0 10px var(--green-neon);
 }
 
 header.grid-background p {
   font-size: 18px;
   max-width: 800px;
   margin: 0 auto;
+  color: var(--text-color);
   opacity: 0.9;
 }
 
-/* Container Principal */
 main {
   max-width: 1000px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
-/* Seções de Conteúdo (Bluetooth & ESP32) */
 .conteudo-container,
 .esp32-container,
 .detalhes-projeto,
 .secao-tabela,
-.secao-integrantes {
-  background-color: white;
-  border: 3px solid darkblue;
+.secao-integrantes,
+.secao-criadores {
+  background-color: var(--bg-card);
+  border: 2px solid var(--green-neon);
   border-radius: 20px;
   padding: 30px;
   margin-bottom: 35px;
-  box-shadow: 0 0 10px rgba(0, 0, 139, 0.2);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.25);
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -62,16 +68,16 @@ main {
 
 .detalhes-projeto,
 .secao-tabela,
-.secao-integrantes {
-  display: block; /* Para seções de bloco único */
+.secao-integrantes,
+.secao-criadores {
+  display: block; 
 }
 
-/* Textos e Títulos */
 h2 {
-  color: darkblue;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: var(--green-neon);
   font-size: 32px;
   margin-top: 0;
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
 }
 
 p, li {
@@ -79,7 +85,6 @@ p, li {
   line-height: 1.6;
 }
 
-/* Blocos com Imagens */
 .texto-bloco, .esp32-texto {
   flex: 1;
   min-width: 280px;
@@ -91,35 +96,39 @@ p, li {
   height: 250px;
   object-fit: cover;
   border-radius: 12px;
-  border: 2px solid darkblue;
+  border: 2px solid var(--green-neon);
   margin: 0 auto;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
 }
 
-/* Botões */
-.botao-voltar {
+.botao-voltar,
+.btn-destaque {
   display: inline-block;
   margin-top: 15px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
+  font-weight: bold;
   text-decoration: none;
-  background-color: blue;
-  color: whitesmoke;
-  border: 2px solid darkblue;
+  background-color: transparent;
+  color: var(--green-neon);
+  border: 2px solid var(--green-neon);
   border-radius: 8px;
   padding: 10px 20px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+  cursor: pointer;
 }
 
-.botao-voltar:hover {
-  background-color: whitesmoke;
-  color: blue;
+.botao-voltar:hover,
+.btn-destaque:hover {
+  background-color: var(--green-neon);
+  color: #000000;
+  box-shadow: 0 0 20px var(--green-neon);
   transform: scale(1.05);
 }
 
-/* FAQ / Details */
 .faq-container details {
-  background-color: whitesmoke;
-  border: 1px solid darkblue;
+  background-color: #1a1a1a;
+  border: 1px solid var(--green-neon);
   border-radius: 8px;
   padding: 12px;
   margin-top: 10px;
@@ -129,12 +138,12 @@ p, li {
 .faq-container summary {
   font-weight: bold;
   font-size: 18px;
-  color: darkblue;
+  color: var(--green-neon);
 }
 
 /* Tabelas */
 .tabela-wrapper {
-  overflow-x: auto; /* Garante que a tabela não quebre no celular */
+  overflow-x: auto; 
   margin-top: 15px;
 }
 
@@ -146,31 +155,88 @@ table {
 
 th, td {
   padding: 12px 15px;
-  border: 1px solid #cccccc;
+  border: 1px solid #333333;
 }
 
 th {
-  background-color: darkblue;
-  color: white;
+  background-color: #1a1a1a;
+  color: var(--green-neon);
   font-size: 18px;
+  border-bottom: 2px solid var(--green-neon);
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #161616;
 }
 
-/* Rodapé */
-footer {
-  background-color: darkblue;
-  color: white;
+/* Seção dos Desenvolvedores */
+.secao-criadores {
+  text-align: center;
+}
+
+.subtitulo-turma {
+  color: var(--green-neon);
+  font-size: 1.1rem;
+  margin-top: -10px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.cards-github {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-autor {
+  background-color: #161616;
+  border: 1px solid var(--green-neon);
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-autor:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.35);
+}
+
+.card-autor h3 {
+  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.card-autor p {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  margin-bottom: 5px;
+}
+
+footer, .rodape {
+  background-color: var(--bg-card);
+  color: var(--text-color);
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+  border-top: 1px solid var(--green-neon);
+  box-shadow: 0 -4px 15px rgba(57, 255, 20, 0.15);
 }
 
-/* ==========================================
-   RESPONSIVIDADE (CELULAR)
-   ========================================== */
+.copyright {
+  font-size: 14px;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   header.grid-background h1 {
     font-size: 26px;
@@ -189,5 +255,15 @@ footer {
   .foto-esquerda, .foto-direita {
     max-width: 100%;
     height: auto;
+  }
+
+  .cards-github {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-autor {
+    width: 100%;
+    max-width: 100%;
   }
 }

@@ -1,164 +1,261 @@
+:root {
+  --blue-primary: #0056b3;
+  --blue-hover: #003d82;
+  --blue-light: #eef5ff;
+  --bg-color: #f4f7fa;
+  --card-bg: #ffffff;
+  --text-primary: #1c2a38;
+  --text-secondary: #5a6e85;
+  --border-color: #d1e0f0;
+}
+/* Seção exclusiva dos Desenvolvedores */
+.secao-criadores {
+  text-align: center;
+}
+
+.subtitulo-turma {
+  color: var(--pink);
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.cards-github {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-autor {
+  background: rgba(0, 240, 255, 0.04);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  padding: 20px;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-autor:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.card-autor h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.card-autor p {
+  font-size: 0.95rem;
+  color: #b0c4de;
+  margin-bottom: 5px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
-  margin: 0;
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background-color: whitesmoke;  
-  box-sizing: border-box;
+  background-color: var(--bg-color);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit; 
-}
-
-.topo {
-  background-color: darkblue;
-  padding: 10px;
-  border-radius: 15px;
-  margin: 10px;
-}
-
-h1 {
-  color: white;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 42px;
+.grid-background {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, #003366 100%);
+  padding: 50px 20px;
+  border-radius: 0 0 24px 24px;
   text-align: center;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 86, 179, 0.15);
+}
+
+.grid-background h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+
+.grid-background p {
+  font-size: 18px;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.main-container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.titulo,
+.detalhes-projeto,
+.secao-integrantes {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 35px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.titulo p,
+.detalhes-projeto p,
+.secao-integrantes p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.titulo strong,
+.detalhes-projeto strong,
+.secao-integrantes strong {
+  color: var(--blue-primary);
 }
 
 h2 {
-  color: blue;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 40px;
-  text-align: center;
-}
-
-
-.caixa1,
-.caixa2 {
-  width: 90%;
-  max-width: 1000px; 
-  margin: 40px auto;
-  background-color: whitesmoke;
-  border: 3px solid darkblue;
-  border-radius: 20px;
-  box-shadow: 0 0 5px darkblue;
-}
-
-.bloco {
-  margin: 0 auto;
+  color: var(--blue-primary);
+  font-size: 28px;
+  margin-bottom: 20px;
   position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 3px;
+  background-color: var(--blue-primary);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.projeto {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 15px;
-
-  width: 100%;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bloco:hover {
-  transform: scale(1.02);
+.projeto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 86, 179, 0.1);
 }
 
-.bloco img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
+.Imagem img {
   width: 100%;
   max-width: 500px;
   height: 300px;
   object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.bloco button,
-.projetos button {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 22px;
-  cursor: pointer;
-  background-color: blue;
-  color: whitesmoke;
-  border: 3px solid darkblue;
-  border-radius: 10px;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-}
-
-.bloco button:hover,
-.projetos button:hover {
-  background-color: whitesmoke;
-  color: blue;
-  transform: scale(1.05);
-}
-
-.primeiro p,
-#sobre p {
-  color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  text-align: center;
-  line-height: 1.5;
-  padding: 10px 20px;
-}
-
-#sobre {
-  margin-top: 0;
-  padding: 30px 40px;
-}
-
-.projetos {
-  text-decoration: none;
-  padding: 20px;
+.botoes-container {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  width: 100%;
 }
 
+.btn-destaque {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--blue-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 86, 179, 0.25);
+  cursor: pointer;
+}
 
+.btn-destaque:hover {
+  background-color: var(--blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 86, 179, 0.35);
+}
+
+.btn-destaque .icone-seta {
+  transition: transform 0.3s ease;
+}
+
+.btn-destaque:hover .icone-seta {
+  transform: translateX(4px);
+}
+
+.secao-integrantes {
+  text-align: center;
+  background-color: var(--blue-light);
+  border-color: #c0d8f0;
+}
+
+.rodape {
+  background-color: #ffffff;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+}
+
+.copyright {
+  font-size: 14px;
+}
 
 @media (max-width: 768px) {
-  
-  h1 {
-    font-size: 28px; 
+  .grid-background h1 {
+    font-size: 30px;
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
-  .caixa1,
-  .caixa2 {
-    width: 95%; 
-    margin: 20px auto;
+  .titulo,
+  .detalhes-projeto,
+  .secao-integrantes,
+  .projeto {
+    padding: 20px;
   }
 
-  .bloco {
-    padding: 15px; 
+  .Imagem img {
+    height: 220px;
   }
 
-  .bloco img {
-    height: 200px; 
-  }
-
-  #sobre {
-    padding: 20px 10px; 
-  }
-
-  .primeiro p,
-  #sobre p {
-    font-size: 16px;
-    padding: 5px 10px;
-  }
-
-  .bloco button,
-  .projetos button {
-    font-size: 18px;
-    width: 100%; 
-    padding: 12px 10px;
+  .btn-destaque {
+    width: 100%;
+    justify-content: center;
   }
 }

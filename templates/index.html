@@ -7,33 +7,56 @@
     <title>Mostra Técnica 2026</title>
   </head>
   <body>
-  <div class="caixa1">
-  <section class="topo">
-    <h1>Mostra Técnica 2026</h1>
-  </section>
 
-  <section class="primeiro">
-    <p>Obrigado por vir a Mostra Técnica 2026 da Etec Philadelpho Gouvêa Netto! <br> Você está no barracão de Eletrônica, visite os projetos!</p>
-  </section>
-  </div>
+    <header class="grid-background">
+      <h1>Mostra Técnica 2026</h1>
+      <p>ETEC Philadelpho Gouvêa Netto</p>
+    </header>
 
+    <main class="main-container">
 
-    <div class="bloco">
-      <img src="https://images.unsplash.com/photo-1649559295229-961cbad5d13f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXNwMzJ8ZW58MHx8MHx8fDA%3D" alt="Foto do ESP32" />
-      <a href="#sobre"> <button>Saiba mais sobre a mostra técnica</button></a>
-    </div>
-
-    <div class="caixa2">
-
-      <section id="sobre">
-         <h2>Saiba mais sobre a mostra técnica:</h2>
-         
-         <p>A mostra técnica da Etec Philadelpho Gouvêa Netto é um evento que acontece anualmente onde alunos têm a oportunidade de mostrarem seus projetos desenvolvidos em grupo.</p>
+      <section class="titulo">
+        <p>Seja bem-vindo ao nosso site da <strong>Mostra Técnica 2026</strong> da ETEC Philadelpho Gouvêa Netto! Agradecemos muito a sua visita e participação.</p>
+        <p>Este espaço foi criado para apresentar o evento e dar visibilidade aos projetos inovadores desenvolvidos com muita dedicação pelos alunos do <strong>Barracão de Eletrônica</strong>.</p>
+        <p>Fique à vontade para explorar o site, conhecer de perto as nossas criações e descobrir o universo tecnológico que desenvolvemos por aqui!</p>
       </section>
 
-    <a class="projetos" href="{{ url_for('projetos') }}"><button>Ver os projetos</button></a>
-    
-    </div>
+      <section class="projeto">
+        <div class="Imagem">
+          <img src="https://images.unsplash.com/photo-1649559295229-961cbad5d13f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXNwMzJ8ZW58MHx8MHx8fDA%3D" alt="Foto do ESP32" />
+        </div>
+        <div class="botoes-container">
+          <a class="btn-destaque" href="#sobre">
+            Saiba mais sobre a mostra técnica
+            <span class="icone-seta">→</span>
+          </a>
+        </div>
+      </section>
 
+      <section id="sobre" class="detalhes-projeto">
+        <h2>Saiba mais sobre a mostra técnica</h2>
+        <p>A mostra técnica da ETEC Philadelpho Gouvêa Netto é um evento que acontece anualmente onde alunos de diversos cursos como Desenvolvimento de Sistemas, Eletrônica, Eletrotécnica, Mecânica, Mecatrônica, Administração, Edificações e Enfermagem têm a oportunidade de mostrar seus projetos desenvolvidos em grupo.</p>
+        <p>O curso de Eletrônica ganha grande destaque no evento, pois os estudantes aplicam conceitos de circuitos elétricos, automação, microcontroladores (como Arduino e ESP32) e robótica para criar soluções tecnológicas reais. É a oportunidade perfeita para ver na prática o desenvolvimento de protótipos inteligentes, sistemas automatizados e projetos voltados para a indústria 4.0 e a internet das coisas (IoT).</p>
+        
+        <div class="botoes-container">
+          <a class="btn-destaque" href="{{ url_for('projetos') }}">
+            Ver os projetos
+            <span class="icone-seta">→</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="secao-integrantes">
+        <h2>Desenvolvedores do Site</h2>
+        <p>Este site foi desenvolvido por:</p>
+        <p><strong>Gabriel Alves Silva</strong> e <strong>João Pedro de Oliveira Nestor</strong>.</p>
+      </section>
+
+    </main>
+
+    <footer class="rodape">
+      <p class="copyright">Mostra Técnica 2026 &copy; Todos os direitos reservados.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>

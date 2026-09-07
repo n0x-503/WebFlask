@@ -1,92 +1,150 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos - 2° Eletrônica B</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="{{ url_for('static', filename='projetos.css') }}">
+
+```
+<title>Projetos - 2° Eletrônica B</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='projetos.css') }}">
+```
+
 </head>
 
 <body>
 
-    <div class="grid-background"></div>
-    <div class="glow-orb"></div>
+```
+<div class="grid-background"></div>
+<div class="glow-orb"></div>
 
-    <main class="main-container">
+<main class="main-container">
 
-        <header class="titulo">
-            <h1>PROJETOS 2° ELETRÔNICA B</h1>
-            <p>
-                Os alunos do 2º ano de Eletrônica desenvolveram projetos
-                usando ESP32, Bluetooth, sensores e programação,
-                aplicando na prática os conhecimentos adquiridos no curso.
-            </p>
-        </header>
+    <header class="titulo">
 
-        <section class="projeto">
-            <h2>
-                1° PROJETO
-                <span class="autor">FEITO POR: JOÃO</span>
-            </h2>
+        <h1>PROJETOS 2° ELETRÔNICA B</h1>
 
-            <h3>SENSOR DE MOVIMENTO 📢</h3>
+        <p>
+            Os alunos do 2º ano de Eletrônica desenvolveram projetos
+            usando ESP32, Bluetooth, sensores e programação,
+            aplicando na prática os conhecimentos adquiridos no curso.
+        </p>
 
-            <div class="Imagem">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7DDq0hq64ZZv5XUuLdomPEHFMGLcGwJfIXnRKsybJ_g&s=10" alt="Foto do projeto Sensor de Movimento">
-            </div>
+    </header>
 
-            <p>
-                ● Um sensor de movimento detecta quando uma pessoa ou objeto
-                se movimenta em determinado local.
-                <br><br>
-                Ele pode enviar um sinal para um ESP32, que então executa
-                uma ação, como acender uma luz, emitir um alerta ou enviar
-                uma informação por Bluetooth.
-            </p>
-        </section>
 
-        <section class="projeto">
-            <h2>
-                2° PROJETO
-                <span class="autor">FEITO POR: GABRIEL</span>
-            </h2>
+    <!-- 1° PROJETO -->
+    <section class="projeto">
 
-            <h3>CONTROLE DE SERVO MOTOR ⚙️</h3>
+        <h2>
+            1° PROJETO
 
-            <div class="Imagem">
-                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRciE6CAD4QdMV2DKF-tFDMyr4g3A2JM5Ar27yWJrxWiHS52nCqv0ZHlmRgPR45EdOY60VQLmV1XeUhAgelNZuLa51J30Fm" alt="Foto do projeto Controle de Servo Motor">
-            </div>
+            <span class="autor">
+                FEITO POR: JOÃO PEDRO DE OLIVEIRA NESTOR, GABRIEL ALVES SILVA E JONAS BORGES GASPARI
+            </span>
+        </h2>
 
-            <p>
-                ● Projeto desenvolvido utilizando um ESP32 para controlar
-                a posição do servo através de comandos enviados ao microcontrolador.
-            </p>
-        </section>
+        <h3>AUTOMAÇÃO VIA BLUETOOTH 📱</h3>
 
-    </main>
+        <div class="Imagem">
 
-    <footer class="rodape">
-        <nav class="botoes-container">
-            <a href="{{ url_for('homepage') }}" class="btn-home">
-                ⬅ Voltar para a Home
-            </a>
-            
+            <img src="https://t4.ftcdn.net/jpg/13/20/70/67/240_F_1320706746_WWi8cqDM1sq6EniCyFWx4QgJDmWaELCZ.jpg"
+                 alt="Foto do projeto Automação via Bluetooth">
+
+        </div>
+
+        <br>
+
+        <p>
+            Neste projeto, um sistema inteligente foi desenvolvido para que
+            utilizasse um sensor para medir a <strong>temperatura e a umidade</strong>
+            em tempo real. Os dados coletados são mostrados em tempo real e
+            também enviados diretamente para um aplicativo personalizado via
+            comunicação <strong>Bluetooth</strong>.
+        </p>
+
+        <p>
+            Pelo aplicativo, o usuário consegue monitorar os valores e
+            configurar um limite máximo de segurança para a temperatura e
+            a umidade. Caso o ambiente ultrapasse qualquer um desses limites
+            definidos, o dispositivo executa uma ação imediata de alerta,
+            acendendo uma lâmpada para exemplificar o acionamento de um
+            sistema de segurança ou refrigeração.
+        </p>
+
+        <!-- BOTÃO DO 1° PROJETO -->
+        <div class="botoes-container">
             <a href="{{ url_for('nossoprojeto') }}" class="btn-projeto btn-destaque">
-                <span>Nosso Projeto</span>
+                <span>Saiba Mais</span>
                 <span class="icone-seta">➔</span>
             </a>
-        </nav>
+        </div>
 
-        <p class="copyright">
-            © 2026 - 2° Eletrônica B - Todos os direitos reservados
+    </section>
+
+
+    <!-- 2° PROJETO -->
+    <section class="projeto">
+
+        <h2>
+            2° PROJETO
+
+            <span class="autor">
+                FEITO POR: LEVI SANTOS DA CRUZ, RODRIGO SIQUEIRA TAMBURE, RYAN BARTOLOMEI
+            </span>
+        </h2>
+
+        <h3>CONTROLE DE LÂMPADA INTELIGENTE COM ESP32 💡</h3>
+
+        <div class="Imagem">
+
+            <img src="https://t4.ftcdn.net/jpg/06/24/03/85/240_F_624038570_v9mIGWg71JTPtsZrQGg9zix92Szjloiz.jpg"
+                 alt="Foto do projeto Controle de Lâmpada Inteligente">
+
+        </div>
+
+        <p>
+            Este projeto usa sensores para monitorar a umidade e a
+            temperatura ambiente, e permite ligar lâmpada através do
+            Bluetooth.
         </p>
-    </footer>
+
+        <!-- BOTÃO DO 2° PROJETO -->
+        <div class="botoes-container">
+            <a href="https://levizblessedpo.github.io/Projeto-Mostra-Tecnica-ETEC/" class="btn-projeto btn-destaque">
+                <span>Saiba Mais</span>
+                <span class="icone-seta">➔</span>
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="rodape">
+
+    <nav class="botoes-container">
+
+        <a href="{{ url_for('homepage') }}" class="btn-home">
+            ⬅ Voltar para a Home
+        </a>
+
+    </nav>
+
+    <p class="copyright">
+        © 2026 - 2° Eletrônica B - Todos os direitos reservados
+    </p>
+
+</footer>
+```
 
 </body>
 
