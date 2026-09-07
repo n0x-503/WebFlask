@@ -22,6 +22,14 @@
 
 ---
 
+## 🌐 Acesse o Projeto
+
+O site já está publicado e pode ser acessado diretamente pelo link:
+
+👉 **[noxsite.pythonanywhere.com](https://noxsite.pythonanywhere.com)**
+
+---
+
 ## Equipe
 
 - Levi Santos da Cruz
@@ -116,8 +124,6 @@ Desenvolver uma interface moderna, intuitiva e interativa.
 
 ## Funcionalidades
 
-> **Projeto em desenvolvimento**
-
 ### Página Inicial
 
 Apresentação da Mostra Técnica e acesso às principais áreas do site.
@@ -132,7 +138,7 @@ Espaço destinado à apresentação dos projetos desenvolvidos pelos alunos.
 
 ### Design Responsivo
 
-O site será desenvolvido para oferecer uma boa experiência em diferentes dispositivos, incluindo computadores, tablets e smartphones.
+O site foi desenvolvido para oferecer uma boa experiência em diferentes dispositivos, incluindo computadores, tablets e smartphones.
 
 ---
 
@@ -149,23 +155,3 @@ O site será desenvolvido para oferecer uma boa experiência em diferentes dispo
 | JavaScript | Interatividade e funcionalidades |
 
 </div>
-
----
-
-## Estrutura do Projeto
-
-```text
-mostra-tecnica/
-│
-├── app.py
-├── templates/
-│   ├── index.html
-│   ├── projetos.html
-│   └── curso.html
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── img/
-│
-└── README.md
