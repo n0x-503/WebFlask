@@ -32,7 +32,6 @@ O site já está publicado e pode ser acessado diretamente pelo link:
 
 ## Equipe
 
-- Levi Santos da Cruz
 - João Pedro de Oliveira Nestor
 - Gabriel Alves Silva
 
